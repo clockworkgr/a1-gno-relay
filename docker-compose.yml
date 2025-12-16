@@ -1,0 +1,22 @@
+services:
+
+  gno:
+    build:
+      context: ./gno
+      args:
+        RELAYER_ADDRESS: g1z437dpuh5s4p64vtq09dulg6jzxpr2hd4q8r5x
+    restart: unless-stopped
+    container_name: gno
+    ports:
+      - "26657:26657"
+      - "8546:8546"
+  
+  atomone:
+    build:
+      context: ./atomone
+      args:
+        RELAYER_ADDRESS: atone1z437dpuh5s4p64vtq09dulg6jzxpr2hdgu88r6
+    restart: unless-stopped
+    container_name: atomone
+    ports:
+      - "26659:26657"
