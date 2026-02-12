@@ -10,6 +10,7 @@ services:
     ports:
       - "26657:26657"
       - "8546:8546"
+      - "8088:8888"
   
   atomone:
     build:

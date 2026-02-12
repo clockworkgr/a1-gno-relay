@@ -9,6 +9,8 @@ RUN        git checkout ibc-fork
 WORKDIR     /app
 RUN        git clone https://github.com/allinbits/gno-realms.git
 WORKDIR     /app/gno-realms
+RUN        git checkout grc20
+WORKDIR     /app/gno-realms
 RUN         cp -R ./gno.land/* /app/gno/examples/gno.land
 WORKDIR     /app/gno/contribs/gnodev
 RUN        go build -o /usr/local/bin/gnodev .

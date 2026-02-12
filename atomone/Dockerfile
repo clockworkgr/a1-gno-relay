@@ -4,9 +4,9 @@ ARG        RELAYER_ADDRESS
 WORKDIR    /app
 RUN        apk add --no-cache git
 RUN        apk add --no-cache automake make
-RUN        git clone https://github.com/clockworkgr/atomone.git
+RUN        git clone https://github.com/atomone-hub/atomone.git
 WORKDIR     /app/atomone
-RUN        git checkout feat/gno-lc-with-diff
+RUN        git checkout feat/gno-lc
 RUN        make build
 WORKDIR     /app/atomone/build
 RUN        cp ./atomoned /usr/local/bin/atomoned
