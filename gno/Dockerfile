@@ -3,13 +3,13 @@ ENV         CGO_ENABLED=0 GOOS=linux
 ARG        RELAYER_ADDRESS
 WORKDIR     /app
 RUN        apk add --no-cache git
-RUN        git clone https://github.com/allinbits/gno.git
+RUN        git clone https://github.com/tbruyelle/gno.git
 WORKDIR     /app/gno
-RUN        git checkout ibc-fork
+RUN        git checkout tbruyelle/origin-send-filter
 WORKDIR     /app
 RUN        git clone https://github.com/allinbits/gno-realms.git
 WORKDIR     /app/gno-realms
-RUN        git checkout grc20
+RUN        git checkout transfer-func
 WORKDIR     /app/gno-realms
 RUN         cp -R ./gno.land/* /app/gno/examples/gno.land
 WORKDIR     /app/gno/contribs/gnodev
