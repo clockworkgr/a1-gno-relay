@@ -9,7 +9,7 @@ RUN        git checkout tbruyelle/origin-send-filter
 WORKDIR     /app
 RUN        git clone https://github.com/allinbits/gno-realms.git
 WORKDIR     /app/gno-realms
-RUN        git checkout transfer-func
+RUN        git checkout master
 WORKDIR     /app/gno-realms
 RUN         cp -R ./gno.land/* /app/gno/examples/gno.land
 WORKDIR     /app/gno/contribs/gnodev
